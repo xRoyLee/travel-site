@@ -2,15 +2,13 @@
 
 /**
  * 1. Change the default font family in all browsers (opinionated).
- * 2. Correct the line height in all browsers.
- * 3. Prevent adjustments of font size after orientation changes in IE and iOS.
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
 
 html {
   font-family: sans-serif; /* 1 */
-  line-height: 1.15; /* 2 */
-  -ms-text-size-adjust: 100%; /* 3 */
-  -webkit-text-size-adjust: 100%; /* 3 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /**
@@ -258,7 +256,6 @@ hr {
 
 button,
 input,
-optgroup,
 select,
 textarea {
   font: inherit; /* 1 */
@@ -537,12 +534,13 @@ a {
 }
 
 .wrapper {
-    overflow: hidden;
-    padding-left: 18px;
-    padding-right: 18px;
-    max-width: 1236px;
-    margin-left: auto;
-    margin-right: auto;
+  overflow: hidden;
+  padding-left: 18px;
+  padding-right: 18px;
+  max-width: 1236px;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 .wrapper--medium {
@@ -562,14 +560,14 @@ a {
   }
 }
 
-.wrapper--no-padding-until-Large {
+.wrapper--no-padding-until-large {
   padding-left: 0;
   padding-right: 0;
 }
 
 @media (min-width: 1010px) {
 
-  .wrapper--no-padding-until-Large {
+  .wrapper--no-padding-until-large {
     padding-left: 18px;
     padding-right: 18px;
   }
@@ -592,7 +590,8 @@ a {
 }
 
 .page-section {
-    padding: 1.2rem 0;
+  padding: 1.2rem 0;
+
 }
 
 @media (min-width: 800px) {
@@ -602,7 +601,7 @@ a {
   }
 }
 
-.page-section--no-b-padding-until-medium{
+.page-section--no-b-padding-until-medium {
   padding-bottom: 0;
 }
 
@@ -613,7 +612,7 @@ a {
   }
 }
 
-.page-section--no-b-padding-until-large{
+.page-section--no-b-padding-until-large {
   padding-bottom: 0;
 }
 
@@ -803,6 +802,7 @@ a {
 
   .row--equal-height-at-medium {
     display: -webkit-box;
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
@@ -811,6 +811,7 @@ a {
 .row--equal-height-at-medium > div {
   float: none;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
@@ -819,6 +820,7 @@ a {
 
   .row--equal-height-at-large {
     display: -webkit-box;
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
@@ -827,6 +829,7 @@ a {
 .row--equal-height-at-large > div {
   float: none;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
@@ -849,9 +852,10 @@ a {
 }
 
 .section-title {
-    font-size: 2.55rem;
-    font-weight: 300;
-    text-align: center;
+  font-size: 2.55rem;
+  font-weight: 300;
+  text-align: center;
+
 }
 
 @media (min-width: 530px) {
@@ -931,16 +935,16 @@ a {
 }
 
 .testimonial {
-    background-color: rgba(255, 255, 255, .5);
-    padding: 0 18px 1px 18px;
-    margin-bottom: 98px;
+  background-color: rgba(255, 255, 255, .8);
+  padding: 0 18px 1px 18px;
+  margin-bottom: 98px;
 }
 
 @media (min-width: 1010px) {
 
   .testimonial {
-    padding: 0 1.8125rem 1px 1.8125rem;
     margin-bottom: 0;
+    padding: 0 1.8125rem 1px 1.8125rem;
   }
 }
 
@@ -956,7 +960,7 @@ a {
   margin: 0 auto -80px auto;
   position: relative;
   top: -80px;
-  border: 6px solid rgba(255, 255, 255, .5);
+  border: 6px solid rgba(255, 255, 255, .8);
 }
 
 .testimonial__title {
@@ -972,93 +976,93 @@ a {
   text-align: center;
   font-weight: 400;
   font-size: 0.9375rem;
-  margin: 0.25rem 0 1rem 0;
+  margin: .25rem 0 1rem 0;
 }
 
 /* Do not edit modules/_sprite directly as it is generated automatically by Gulp.
 Instead edit gulp/templates/sprite */
 
 .icon {
-            background-image: url('/assets/images/sprites/sprite-0f9283b3.svg');
-        }
+      background-image: url('/assets/images/sprites/sprite-0f9283b3.svg');
+    }
 
 .icon--clear-view-escapes {
     width: 142.4px;
     height: 59.53px;
     background-position: 0 0;
-}
+  }
 
 .icon--comment {
     width: 64px;
     height: 64px;
     background-position: 99.70443349753694% 0;
-}
+  }
 
 .icon--facebook {
     width: 21.23px;
     height: 42.01px;
     background-position: 26.040607071652357% 45.795830448496034%;
-}
+  }
 
 .icon--fire {
     width: 56px;
     height: 64px;
     background-position: 0 99.56481481481481%;
-}
+  }
 
 .icon--globe {
     width: 64px;
     height: 64px;
     background-position: 27.586206896551722% 99.56481481481481%;
-}
+  }
 
 .icon--instagram {
     width: 42.01px;
     height: 42.01px;
     background-position: 63.2917018534157% 49.234556504346486%;
-}
+  }
 
 .icon--mail {
     width: 64px;
     height: 48px;
     background-position: 0 48.00806451612903%;
-}
+  }
 
 .icon--rain {
     width: 64px;
     height: 64px;
     background-position: 99.70443349753694% 59.25925925925926%;
-}
+  }
 
 .icon--star {
     width: 64px;
     height: 64px;
     background-position: 59.11330049261084% 99.56481481481481%;
-}
+  }
 
 .icon--twitter {
     width: 51.78px;
     height: 42.06px;
     background-position: 94.04330452560171% 98.50700323226104%;
-}
+  }
 
 .icon--wifi {
     width: 60px;
     height: 64px;
     background-position: 68.79227053140097% 0;
-}
+  }
 
 .icon--youtube {
     width: 34.75px;
     height: 42px;
     background-position: 36.69752421959096% 45.792307692307695%;
-}
+  }
 
 .site-footer {
-    background-color: #2f5572;
-    color: white;
-    padding: .5rem;
-    text-align: center;
+  background-color: #2f5572;
+  color: #FFF;
+  padding: .5rem 0;
+  text-align: center;
 }
 
 .site-footer__text {
@@ -1077,12 +1081,12 @@ Instead edit gulp/templates/sprite */
 }
 
 .site-header {
-    padding: 10px 0;
-    position: absolute;
-    z-index: 2;
-    width: 100%;
-    -webkit-transition: background-color .3s ease-out;
-    transition: background-color .3s ease-out;
+  padding: 10px 0;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  -webkit-transition: background-color .3s ease-out;
+  transition: background-color .3s ease-out;
 }
 
 .site-header--is-expanded {
@@ -1098,7 +1102,7 @@ Instead edit gulp/templates/sprite */
 
 @media (min-width: 800px) {
 
-  .site-header__button-container {
+  .site-header__btn-container {
     float: right;
   }
 }
@@ -1109,8 +1113,8 @@ Instead edit gulp/templates/sprite */
   left: 50%;
   -webkit-transform: translateX(-50%) scale(.8);
           transform: translateX(-50%) scale(.8);
-  -webkit-transform-origin: 50% 0%;
-          transform-origin: 50% 0%;
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
   background-color: #2f5572;
   padding: 25px 36px;
 }
@@ -1129,10 +1133,10 @@ Instead edit gulp/templates/sprite */
 }
 
 .site-header__menu-icon {
-  z-index: 10;
-  width: 19px;
-  height: 20px;
+  width: 20px;
+  height: 19px;
   position: absolute;
+  z-index: 10;
   top: 10px;
   right: 10px;
 }
@@ -1160,10 +1164,10 @@ Instead edit gulp/templates/sprite */
   width: 20px;
   height: 3px;
   background-color: #FFF;
-  -webkit-transform-origin: 0 50%;
-          transform-origin: 0 50%;
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
 }
 
 .site-header__menu-icon::after {
@@ -1195,9 +1199,9 @@ Instead edit gulp/templates/sprite */
 }
 
 .site-header__menu-icon--close-x .site-header__menu-icon__middle {
+  opacity: 0;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
-  opacity: 0;
 }
 
 .site-header__menu-icon--close-x::after {
@@ -1211,8 +1215,8 @@ Instead edit gulp/templates/sprite */
           transform: scale(1.2);
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;
-  z-index: -10;
   position: relative;
+  z-index: -10;
   padding-top: 90px;
   text-align: center;
 }
@@ -1236,7 +1240,7 @@ Instead edit gulp/templates/sprite */
 }
 
 .primary-nav {
-    padding-top: 10px;
+  padding-top: 10px;
 }
 
 @media (min-width: 800px) {
@@ -1291,8 +1295,8 @@ Instead edit gulp/templates/sprite */
 }
 
 .primary-nav a {
+  color: #FFF;
   font-weight: 300;
-  color: #fff;
   text-decoration: none;
   display: block;
   padding: 5px 8px;
@@ -1307,4 +1311,18 @@ Instead edit gulp/templates/sprite */
     padding: 12px 0;
     background-color: transparent;
   }
+}
+
+.reveal-item {
+  opacity: 0;
+  -webkit-transition: all 1.5s ease-out;
+  transition: all 1.5s ease-out;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.reveal-item--is-visible {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
