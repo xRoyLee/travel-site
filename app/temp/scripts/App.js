@@ -10774,7 +10774,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -10796,72 +10796,72 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var StickyHeader = function () {
-	    function StickyHeader() {
-	        _classCallCheck(this, StickyHeader);
+	  function StickyHeader() {
+	    _classCallCheck(this, StickyHeader);
 
-	        this.siteHeader = (0, _jquery2.default)(".site-header");
-	        this.headerTriggerElement = (0, _jquery2.default)(".large-hero__title");
-	        this.createHeaderWaypoint();
-	        this.pageSections = (0, _jquery2.default)(".page-section");
-	        this.headerLinks = (0, _jquery2.default)(".primary-nav a");
-	        this.createPageSectionWaypoints();
-	        this.addSmoothScrolling();
+	    this.siteHeader = (0, _jquery2.default)(".site-header");
+	    this.headerTriggerElement = (0, _jquery2.default)(".large-hero__title");
+	    this.createHeaderWaypoint();
+	    this.pageSections = (0, _jquery2.default)(".page-section");
+	    this.headerLinks = (0, _jquery2.default)(".primary-nav a");
+	    this.createPageSectionWaypoints();
+	    this.addSmoothScrolling();
+	  }
+
+	  _createClass(StickyHeader, [{
+	    key: 'addSmoothScrolling',
+	    value: function addSmoothScrolling() {
+	      this.headerLinks.smoothScroll();
 	    }
-
-	    _createClass(StickyHeader, [{
-	        key: 'addSmoothScrolling',
-	        value: function addSmoothScrolling() {
-	            this.headerLinks.smoothScroll();
+	  }, {
+	    key: 'createHeaderWaypoint',
+	    value: function createHeaderWaypoint() {
+	      var that = this;
+	      new Waypoint({
+	        element: this.headerTriggerElement[0],
+	        handler: function handler(direction) {
+	          if (direction == "down") {
+	            that.siteHeader.addClass("site-header--dark");
+	          } else {
+	            that.siteHeader.removeClass("site-header--dark");
+	          }
 	        }
-	    }, {
-	        key: 'createHeaderWaypoint',
-	        value: function createHeaderWaypoint() {
-	            var that = this;
-	            new Waypoint({
-	                element: this.headerTriggerElement[0],
-	                handler: function handler(direction) {
-	                    if (direction == "down") {
-	                        that.siteHeader.addClass("site-header--dark");
-	                    } else {
-	                        that.siteHeader.removeClass("site-header--dark");
-	                    }
-	                }
-	            });
-	        }
-	    }, {
-	        key: 'createPageSectionWaypoints',
-	        value: function createPageSectionWaypoints() {
-	            var that = this;
-	            this.pageSections.each(function () {
-	                var currentPageSection = this;
-	                new Waypoint({
-	                    element: currentPageSection,
-	                    handler: function handler(direction) {
-	                        if (direction == "down") {
-	                            var matchingHeaderLink = currentPageSection.getAttribute("data-matching-link");
-	                            that.headerLinks.removeClass("is-current-link");
-	                            (0, _jquery2.default)(matchingHeaderLink).addClass("is-current-link");
-	                        }
-	                    },
-	                    offset: "18%"
-	                });
+	      });
+	    }
+	  }, {
+	    key: 'createPageSectionWaypoints',
+	    value: function createPageSectionWaypoints() {
+	      var that = this;
+	      this.pageSections.each(function () {
+	        var currentPageSection = this;
+	        new Waypoint({
+	          element: currentPageSection,
+	          handler: function handler(direction) {
+	            if (direction == "down") {
+	              var matchingHeaderLink = currentPageSection.getAttribute("data-matching-link");
+	              that.headerLinks.removeClass("is-current-link");
+	              (0, _jquery2.default)(matchingHeaderLink).addClass("is-current-link");
+	            }
+	          },
+	          offset: "18%"
+	        });
 
-	                new Waypoint({
-	                    element: currentPageSection,
-	                    handler: function handler(direction) {
-	                        if (direction == "up") {
-	                            var matchingHeaderLink = currentPageSection.getAttribute("data-matching-link");
-	                            that.headerLinks.removeClass("is-current-link");
-	                            (0, _jquery2.default)(matchingHeaderLink).addClass("is-current-link");
-	                        }
-	                    },
-	                    offset: "-40%"
-	                });
-	            });
-	        }
-	    }]);
+	        new Waypoint({
+	          element: currentPageSection,
+	          handler: function handler(direction) {
+	            if (direction == "up") {
+	              var matchingHeaderLink = currentPageSection.getAttribute("data-matching-link");
+	              that.headerLinks.removeClass("is-current-link");
+	              (0, _jquery2.default)(matchingHeaderLink).addClass("is-current-link");
+	            }
+	          },
+	          offset: "-40%"
+	        });
+	      });
+	    }
+	  }]);
 
-	    return StickyHeader;
+	  return StickyHeader;
 	}();
 
 	exports.default = StickyHeader;
@@ -11218,7 +11218,7 @@
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -11232,48 +11232,48 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var Modal = function () {
-	    function Modal() {
-	        _classCallCheck(this, Modal);
+	  function Modal() {
+	    _classCallCheck(this, Modal);
 
-	        this.openModalButton = (0, _jquery2.default)(".open-modal");
-	        this.modal = (0, _jquery2.default)(".modal");
-	        this.closeModalButton = (0, _jquery2.default)(".modal__close");
-	        this.events();
+	    this.openModalButton = (0, _jquery2.default)(".open-modal");
+	    this.modal = (0, _jquery2.default)(".modal");
+	    this.closeModalButton = (0, _jquery2.default)(".modal__close");
+	    this.events();
+	  }
+
+	  _createClass(Modal, [{
+	    key: "events",
+	    value: function events() {
+	      // clicking the open modal button
+	      this.openModalButton.click(this.openModal.bind(this));
+
+	      // clicking the x close modal button
+	      this.closeModalButton.click(this.closeModal.bind(this));
+
+	      // pushes any key
+	      (0, _jquery2.default)(document).keyup(this.keyPressHandler.bind(this));
 	    }
+	  }, {
+	    key: "keyPressHandler",
+	    value: function keyPressHandler(e) {
+	      if (e.keyCode == 27) {
+	        this.closeModal();
+	      }
+	    }
+	  }, {
+	    key: "openModal",
+	    value: function openModal() {
+	      this.modal.addClass("modal--is-visible");
+	      return false;
+	    }
+	  }, {
+	    key: "closeModal",
+	    value: function closeModal() {
+	      this.modal.removeClass("modal--is-visible");
+	    }
+	  }]);
 
-	    _createClass(Modal, [{
-	        key: "events",
-	        value: function events() {
-	            //clicking the open modal button
-	            this.openModalButton.click(this.openModal.bind(this));
-
-	            //clicking the x close modal button
-	            this.closeModalButton.click(this.closeModal.bind(this));
-
-	            //pushes the any key
-	            (0, _jquery2.default)(document).keyup(this.keyPressHandler);
-	        }
-	    }, {
-	        key: "keyPressHandler",
-	        value: function keyPressHandler(e) {
-	            if (e.keyCode == 27) {
-	                tthis.closeModal();
-	            }
-	        }
-	    }, {
-	        key: "openModal",
-	        value: function openModal() {
-	            this.modal.addClass("modal--is-visible");
-	            return false;
-	        }
-	    }, {
-	        key: "closeModal",
-	        value: function closeModal() {
-	            this.modal.removeClass("modal--is-visible");
-	        }
-	    }]);
-
-	    return Modal;
+	  return Modal;
 	}();
 
 	exports.default = Modal;

@@ -1089,12 +1089,12 @@ Instead edit gulp/templates/sprite */
 }
 
 .site-header {
-    padding: 10px 0;
-    position: absolute;
-    width: 100%;
-    z-index: 2;
-    -webkit-transition: background-color .3s ease-out;
-    transition: background-color .3s ease-out;
+  padding: 10px 0;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  -webkit-transition: background-color .3s ease-out;
+  transition: background-color .3s ease-out;
 }
 
 .site-header--is-expanded {
@@ -1145,8 +1145,8 @@ Instead edit gulp/templates/sprite */
   }
 
   .site-header--dark .site-header__logo {
-    -webkit-transform: scale(.56);
-            transform: scale(.56);
+    -webkit-transform: scale(.57);
+            transform: scale(.57);
   }
 }
 
@@ -1262,7 +1262,7 @@ Instead edit gulp/templates/sprite */
 }
 
 .primary-nav {
-    padding-top: 10px;
+  padding-top: 10px;
 }
 
 @media (min-width: 800px) {
@@ -1354,19 +1354,19 @@ Instead edit gulp/templates/sprite */
 }
 
 .modal {
-    position: fixed;
-    z-index: 5;
-    background-color: rgba(255,255,255, .94);
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-    -webkit-transition: all .3 ease-out;
-    transition: all .3 ease-out;
+  position: fixed;
+  z-index: 5;
+  background-color: rgba(255, 255, 255, .94);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
 }
 
 .modal--is-visible {
@@ -1398,19 +1398,35 @@ Instead edit gulp/templates/sprite */
   font-size: 2rem;
   -webkit-transform: scaleX(1.2);
           transform: scaleX(1.2);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  color: #2f5572;
   cursor: pointer;
 }
 
+.modal__close:hover {
+  color: #d59541;
+}
+
 .social-icons {
-    text-align: center;
+  text-align: center;
 }
 
 .social-icons__icon {
   background-color: #d59541;
   display: inline-block;
-  margin: 0 5px;
-  width: 72px;
+  margin: 0 5px 5px 5px;
+  width: 33%;
   height: 72px;
+  position: relative;
+}
+
+@media (min-width: 530px) {
+
+  .social-icons__icon {
+    width: 72px;
+    margin: 0 5px;
+  }
 }
 
 .social-icons__icon .icon {
